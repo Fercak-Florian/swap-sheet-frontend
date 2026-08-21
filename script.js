@@ -17,6 +17,15 @@ console.log("en cours...")
 const allTsp = await getData();
 getSelectOptions(allTsp);
 
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach(navLink => {
+    navLink.classList.toggle(
+        "active",
+        navLink.pathname === window.location.pathname
+    );
+});
+
 
 
 function getSelectOptions(allTsp) {
